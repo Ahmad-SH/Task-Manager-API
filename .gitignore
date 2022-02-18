@@ -1,2 +1,3 @@
 config
 installedPackages.txt
+node_modules
