@@ -1,16 +1,49 @@
-const express = require("express");
-const Tasks = require("./models/tasks");
-require("./db/mongoose"); //to ensure file runs and mongoose connected to database
-const userRouter = require("./routers/user");
-const taskRouter = require("./routers/tasks");
-const User = require("./models/users"); //load user in
-const jwt = require("jsonwebtoken");
+const app = require('./app')
+
+
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const express = require("express");
+// const Tasks = require("./models/tasks");
+// require("./db/mongoose"); //to ensure file runs and mongoose connected to database
+// const userRouter = require("./routers/user");
+// const taskRouter = require("./routers/tasks");
+// const User = require("./models/users"); //load user in
+// const jwt = require("jsonwebtoken");
 //file upload
 //we will use form data, not json as before
 // const multer = require('multer')
 
-const app = express();
-const port = process.env.PORT;
+// const app = express();
+// const port = process.env.PORT;
 
 // const upload = multer({
 //   dest:'images',
@@ -42,16 +75,14 @@ const port = process.env.PORT;
 
 // when receiving data from outside
 // we need to configure express to parse data for us
-app.use(express.json());
-app.use(userRouter);
-app.use(taskRouter);
+// app.use(express.json());
+// app.use(userRouter);
+// app.use(taskRouter);
 
 //with middleware: new request --> so smth --> run route handler
 
 
-app.listen(port, () => {
-  console.log(`server is up on port ${port}`);
-});
+
 
 // const myFunction = async () => {
 //     // const password = "Red12345!";
